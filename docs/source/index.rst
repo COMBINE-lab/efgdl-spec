@@ -15,3 +15,5 @@ Contents
 .. toctree::
 
    usage
+   intervals
+   transformations

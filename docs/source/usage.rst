@@ -36,7 +36,7 @@ In addition to having the ability to *match* input sequences against a descripti
    1{<brc><anchor>x:}2{r<read>:}
    -> 1{<brc>pad(<anchor>, 3, A)<read>}
 
-This example demonstrates 3 separate features.  It pre-defined two variables, ``bcr`` and ``anchor``. It also creates an *inline* variable
+This example demonstrates 3 separate features.  It pre-defined two variables, ``brc`` and ``anchor``. It also creates an *inline* variable
 binding ``<read>``.  It subsequently transforms the input geometry into the output geometry (the string specified after the ``->``).
 Let's break down these components.
 
@@ -77,7 +77,7 @@ parameter.  To understand what this is, we must understand what the ``map(P, F, 
 The ``map`` function is one of the more sophisticated functions in the ``EFGDL``.  It takes 3 arguments; the first is a pattern to match or bound variable.
 The second is a "filter list", which is a mapping of input patterns to output patterns.  If the variable matches a listed input pattern, then it will be 
 substituted with the corresponding output patterm.  The third argument is a function that will be run on the first input in the case that it *does not*
-match some pattern in the filter list.  For example, consider that ``<bcr>`` is ``AACTGGTG``, and consider that our filter list is the simple mapping:
+match some pattern in the filter list.  For example, consider that ``<brc>`` is ``AACTGGTG``, and consider that our filter list is the simple mapping:
 
 ```
 AACTGGTG  GTGCACCTGG
@@ -89,8 +89,8 @@ Then in this case the result of our ``map`` expression will simply be ``GTGCACCT
 AAGCAGTC  GTGCACCTGG
 ```
 
-In this case, our ``<bcr>`` pattern does not match a pattern in our filter list.  In that case, the output of the ``map`` expression will be 
-``AACTGGTGAA``.  That is, it is simply our input pattern ``<bcr>`` padded to length 10 with ``A``. This sophisticated example also demonstrates
+In this case, our ``<brc>`` pattern does not match a pattern in our filter list.  In that case, the output of the ``map`` expression will be 
+``AACTGGTGAA``.  That is, it is simply our input pattern ``<brc>`` padded to length 10 with ``A``. This sophisticated example also demonstrates
 another capability of the EFGDL - composition.  The functions defined in EFGDL can be composed to build larger and more complex expressions.
 This composition allows a relatively small number of functions to cover a large number of different use cases.
 
