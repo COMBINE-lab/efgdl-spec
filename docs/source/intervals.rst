@@ -30,16 +30,16 @@ The barcode, UMI, and read specifier can be used with any of the length interval
 
 Prefixes for each specifier
 
-* Barcode -> `b`
-* UMI -> `u`
-* Read -> `r`
+* Barcode -> ``b``
+* UMI -> ``u``
+* Read -> ``r``
 
-Examples (swap `b` with other prefixes for other specifiers) 
+Examples (swap ``b`` with other prefixes for other specifiers) 
 
 Fixed Length Barcode Interval
 
 .. code-block::
-    
+
     b[10]
 
 Variable Length Barcode Interval
@@ -59,13 +59,13 @@ While there is no difference between using either of these three specifiers, whe
 (1) Describe how to parse and transform given sequences, and
 (2) Have an easily interpretable format for sequencing protocols
 
-Having these three specifiers helps with the second goal. Labeling an interval with `b` and another with `u` means these two intervals are distinct even though they may be thought of as the same in the case of pre-processing sequences.
+Having these three specifiers helps with the second goal. Labeling an interval with ``b`` and another with ``u`` means these two intervals are distinct even though they may be thought of as the same in the case of pre-processing sequences.
 
 Discard Specifier
 -----------------
 
-The discard specified can be used with any of the length interval. A discard specifier will remove the matched interval. To specify a discard use prefix `x` the same way as
-used above with `b` for barcode.
+The discard specified can be used with any of the length interval. A discard specifier will remove the matched interval. To specify a discard use prefix ``x`` the same way as
+used above with ``b`` for barcode.
 
 
 Fragment Specifier
@@ -73,7 +73,7 @@ Fragment Specifier
 
 The fragment specifier does not operate in the same way as the above specifiers. The fragment specifier is mean to match known sequences based on their sequence rather than just length.
 
-To declare a fragment use prefix `f` and provide the known sequence, like below:
+To declare a fragment use prefix ``f`` and provide the known sequence, like below:
 
 .. code-block::
     
