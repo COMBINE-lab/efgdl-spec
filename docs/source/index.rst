@@ -17,3 +17,4 @@ Contents
    usage
    intervals
    transformations
+   example
