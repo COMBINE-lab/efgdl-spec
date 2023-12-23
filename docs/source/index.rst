@@ -18,3 +18,4 @@ Contents
    intervals
    transformations
    example
+   more_with_map
